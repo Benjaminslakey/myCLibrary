@@ -1,0 +1,3 @@
+My implementation of libc printf as allowed per 42 project guidelines.
+I have yet to add floating point conversions though this working repo contains a a base for their future implementation.
+I am hoping to add gcc compiler warnings and the ability to save ft_printf output to a string in the next iteration of this code.
