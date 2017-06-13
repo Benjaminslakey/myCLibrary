@@ -20,6 +20,7 @@ STRINGS= strings/d_strlen \
 	strings/ft_strcpy \
 	strings/ft_strdup \
 	strings/ft_strndup \
+	strings/ft_str_replace \
 	strings/ft_strnew \
 	strings/ft_strequ \
 	strings/ft_strlen \

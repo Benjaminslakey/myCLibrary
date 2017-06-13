@@ -66,6 +66,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void                free_strings(char ***strings);
 size_t				ft_strlen(const char *s);
+char                *ft_str_replace(char **to_replace, char *replace_with);
 char				*ft_strdup(const char *s1);
 char				*ft_strndup(const char *s1, size_t size);
 char				*ft_strcpy(char *dst, const char *src);

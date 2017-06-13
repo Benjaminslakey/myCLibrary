@@ -58,17 +58,15 @@ int					get_next_line(const int fd, char **line)
 	n = find_fd(fd);
 	while (!ft_strchr(n->content, '\n') && (ret = read(fd, buf, BUFF_SIZE)))
 		merge(n, ft_strndup(buf, ret), ret);
-	if (ret < BUFF_SIZE && ft_strlen(n->content) == 0)
-	{
+	if (ret > 0 && ret < BUFF_SIZE  && ft_strlen(n->content) == 0)
 		ft_strclr(*line);
-		return (0);
-	}
+    ERR_GUARD(ft_strlen(n->content) == 0, 0);
 	ptr = n->content;
 	i = d_strlen(ptr, i, '\n');
-	*line = (ptr[i] == '\n') ? (ft_strndup(ptr, i)) : (ft_strdup(n->content));
+	*line = (ptr[i] == '\n') ? ft_strndup(ptr, i) : ft_strdup(ptr);
 	if ((ret == 0 && ptr[i] == 0))
-		ft_strclr((char*)(n->content));
-	n->content = (ptr[i] == '\n') ? (ft_strdup(n->content + (i + 1))) :
-		(n->content + 0);
+		ft_strclr(ptr);
+    if (ptr[i] == '\n')
+        n->content = ft_str_replace(&ptr, ptr + i + 1);
 	return (1);
 }
