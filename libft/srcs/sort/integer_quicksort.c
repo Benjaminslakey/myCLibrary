@@ -16,14 +16,14 @@ static int			choose_pivot(int *int_tab, int left, int right)
 {
 	int				first;
 	int				last;
-	int				middle;
+	int				mid;
 
 	first = int_tab[left];
 	last = int_tab[right];
-	middle = int_tab[left + (right - left) / 2];
-	if (first < middle < last || last < middle < first)
+	mid = int_tab[left + (right - left) / 2];
+	if ((first < mid && mid < last) || (last < mid && mid < first))
 		return (left + (right - left) / 2);
-	else if (middle < first < last || last < first < middle)
+	else if ((mid < first && first < last) || (last < first && first < mid))
 		return (left);
 	else
 		return (right);
