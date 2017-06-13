@@ -60,6 +60,7 @@ MEMORY= memory/ft_memcpy \
 	memory/ft_memset \
 	memory/ft_memcmp \
 	memory/swap_integers \
+	memory/free_strings \
 
 ARRAYS= arrays/new_int_table \
 	arrays/delete_int_table \
