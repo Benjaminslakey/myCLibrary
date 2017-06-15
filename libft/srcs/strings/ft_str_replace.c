@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -13,11 +12,12 @@
 
 #include "../../includes/libft.h"
 
-char                *ft_str_replace(char **to_replace, char *replace_with)
+char				*ft_str_replace(char **to_replace, char *replace_with)
 {
-    char            *temp;
+	char			*temp;
 
-    temp = ft_strdup(replace_with);
-    free(*to_replace);
-    return (temp);
+	MEM_GUARD(replace_with);
+	temp = ft_strdup(replace_with);
+	free(*to_replace);
+	return (temp);
 }

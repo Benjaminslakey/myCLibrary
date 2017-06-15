@@ -63,7 +63,7 @@ MEMORY= memory/ft_memcpy \
 	memory/ft_memcmp \
 	memory/swap_integers \
 	memory/free_strings \
-	memory/free_int_2Darr \
+	memory/free_int_arrays \
 
 ARRAYS= arrays/new_int_table \
 	arrays/delete_int_table \
@@ -98,8 +98,7 @@ OUTPUT= output/ft_putchar \
 	output/print_bits \
 	output/print_hex \
 
-SRCS= 	$(addprefix srcs/, $(STRINGS) $(MEMORY) $(ARRAYS) $(LISTS) $(TREES) $(SORT) $(INPUT) $(OUTPUT)) 
-
+SRCS= 	$(addprefix srcs/, $(STRINGS) $(MEMORY) $(ARRAYS) $(LISTS) $(TREES) $(SORT) $(INPUT) $(OUTPUT))
 
 CFILES= $(addsuffix .c, $(SRCS))
 

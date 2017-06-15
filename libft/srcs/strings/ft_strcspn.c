@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int 			ft_strcspn(char *str, char *allowed)
+int				ft_strcspn(char *str, char *allowed)
 {
-	int 		inspan;
-	int 		i;
-	int 		j;
+	int			inspan;
+	int			i;
+	int			j;
 
 	i = -1;
 	j = -1;
@@ -36,18 +36,3 @@ int 			ft_strcspn(char *str, char *allowed)
 	}
 	return (1);
 }
-
-/*
-* int main(int argc, char **argv)
-* {
-*	if (argc > 2)
-*	{
-*		if (ft_strcspn(argv[1], argv[2]))
-*			printf("within span\n");
-*		else
-*			printf("not within character span\n");
-*		return (1);
-*	}
-*	return (0);
-* }
-*/
