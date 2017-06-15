@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   str_inhaystack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bslakey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 03:14:12 by bslakey           #+#    #+#             */
-/*   Updated: 2016/11/13 01:43:28 by bslakey          ###   ########.fr       */
+/*   Created: 2017/02/08 07:35:29 by bslakey           #+#    #+#             */
+/*   Updated: 2017/06/07 14:33:33 by bslakey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*ft_strnew(size_t size)
+int				str_inhaystack(char *needle, char **haystack)
 {
-	char *new;
+	int			i;
+	bool		found;
 
-	new = (char*)malloc(sizeof(char) * (size + 1));
-	MEM_GUARD(new);
-	ft_bzero(new, size + 1);
-	return (new);
+	i = -1;
+	found = false;
+	while (haystack[++i])
+	{
+		if (!ft_strcmp(needle, haystack[i]))
+		{
+			found = true;
+			break ;
+		}
+	}
+	return (found ? i : -1);
 }

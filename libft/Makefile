@@ -51,6 +51,7 @@ STRINGS= strings/d_strlen \
 	strings/ft_strcspn \
 	strings/ft_is_prime \
 	strings/ft_sqrt \
+	strings/chr_count \
 
 MEMORY= memory/ft_memcpy \
 	memory/ft_memccpy \
@@ -62,11 +63,14 @@ MEMORY= memory/ft_memcpy \
 	memory/ft_memcmp \
 	memory/swap_integers \
 	memory/free_strings \
+	memory/free_int_2Darr \
 
 ARRAYS= arrays/new_int_table \
 	arrays/delete_int_table \
 	arrays/clone_int_array \
 	arrays/copy_int_array \
+	arrays/array_reverse_int \
+	arrays/str_inhaystack \
 
 LISTS= lists/ft_lstnew \
 	lists/ft_lstdelone \

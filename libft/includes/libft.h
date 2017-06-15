@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <stdbool.h>
 # include <fcntl.h>
 
 # define WHT(x) (x == ' ' || x == '\t' || x == '\r' || x == '\v' || XWHT(x))
@@ -65,6 +66,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void                free_strings(char ***strings);
+void                free_int_2Darr(int ***arr, int height);
 size_t				ft_strlen(const char *s);
 char                *ft_str_replace(char **to_replace, char *replace_with);
 char				*ft_strdup(const char *s1);
@@ -74,6 +76,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+int                 chr_count(char *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
@@ -135,13 +138,14 @@ int					ft_nbrlen(intmax_t nbr, int base);
 char				*ft_append_str(char *orig, const char *to_append);
 char				*ft_prepend_str(char *orig, const char *to_prepend);
 int					**new_int_table(int height, int width);
+int					str_inhaystack(char *needle, char **haystack);
 void				delete_int_table(int height, int ***table);
 int					*clone_int_array(int *arr, int arr_size);
 void				copy_int_array(int **dest, int *src, int arr_size);
 void				integer_quicksort(int *int_table, int left, int right);
 void				swap_integers(int *a, int *b);
 int					ft_str_isnum(char *str);
-void				delete_strings(char ***strings, int num);
-int 				get_next_line(const int fd, char **line);
+void				array_reverse_int(int *arr, int size);
+int					get_next_line(const int fd, char **line);
 
 #endif

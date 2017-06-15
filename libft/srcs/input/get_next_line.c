@@ -41,6 +41,7 @@ static void			merge(t_list *node, char const *buff, int size)
 	}
 	temp = node->content;
 	node->content = ft_strjoin(temp, buff);
+    free(temp);
 	free((void*)buff);
 }
 

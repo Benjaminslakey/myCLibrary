@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   chr_count.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bslakey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 03:14:12 by bslakey           #+#    #+#             */
-/*   Updated: 2016/11/13 01:43:28 by bslakey          ###   ########.fr       */
+/*   Created: 2016/11/16 17:25:24 by bslakey           #+#    #+#             */
+/*   Updated: 2016/11/16 17:41:01 by bslakey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*ft_strnew(size_t size)
+int             chr_count(char *s, char chr)
 {
-	char *new;
+    int         i;
+    int         count;
 
-	new = (char*)malloc(sizeof(char) * (size + 1));
-	MEM_GUARD(new);
-	ft_bzero(new, size + 1);
-	return (new);
+    i = -1;
+    count = 0;
+    while (s[++i])
+    {
+        if (s[i] == chr)
+            count++;
+    }
+    return (count);
 }
